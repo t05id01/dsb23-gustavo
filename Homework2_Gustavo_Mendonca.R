@@ -209,7 +209,6 @@ co2_percap = co2_percap %>%
 gdp_percap = gdp_percap %>% 
   select(iso3c,year,GDPpercap)
 energy_select = energy %>% 
-  select(year,iso_code,energy_per_capita)
 
 #Relationship GDP vs CO2 per capita
 joint_table = left_join(gdp_percap,co2_percap,by=c("iso3c"="iso3c","year"="year"))
